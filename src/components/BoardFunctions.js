@@ -29,7 +29,17 @@ Array.prototype.swap = function(i,j){// eslint-disable-line no-extend-native
         }
         return false;
       }
-      
 
+        
+      getBoard(size){
+        return Array.from({length:size*size},(_,b)=>b);
+       }
+       
+       get matrix() {
+         return this.board.reduce(
+           (rows, key, index) => (index % this.size === 0 ? 
+           rows.push([key]) : rows[rows.length-1].push(key)) && rows, []);
+       }
+       
   
   }
