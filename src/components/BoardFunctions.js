@@ -40,6 +40,24 @@ Array.prototype.swap = function(i,j){// eslint-disable-line no-extend-native
            (rows, key, index) => (index % this.size === 0 ? 
            rows.push([key]) : rows[rows.length-1].push(key)) && rows, []);
        }
+
+       randomize(){
+        const scramble = this.board.length*10;
+        const randomize = (min, max) => Math.floor(Math.random() * (max - min) + min);
+        const empty = this.board.indexOf(emptyBox);
+        let [i,j] = [empty%this.size,Math.floor(empty/this.size)];
+        const indexes = ({i,j}) => this.size*j+i;
+ 
+        for(let ind=0;ind<scramble;++ind){
+          let legalFriends = this.checkLegalFriends(i,j);
+          let friend = legalFriends[randomize(0,legalFriends.length)];
+          this.board.swap(indexes(friend),indexes({i,j}));
+          ({i,j} = friend);
+        }
+        return this.matrix;
+     }
+ 
+
        
   
   }
