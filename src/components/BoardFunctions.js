@@ -48,16 +48,26 @@ Array.prototype.swap = function(i,j){// eslint-disable-line no-extend-native
         let [i,j] = [empty%this.size,Math.floor(empty/this.size)];
         const indexes = ({i,j}) => this.size*j+i;
  
-        for(let ind=0;ind<scramble;++ind){
-          let legalFriends = this.checkLegalFriends(i,j);
-          let friend = legalFriends[randomize(0,legalFriends.length)];
+        for(let y=0;y<scramble;++y){
+          const legalFriends = this.checkLegalFriends(i,j);
+          const friend = legalFriends[randomize(0,legalFriends.length)];
           this.board.swap(indexes(friend),indexes({i,j}));
           ({i,j} = friend);
         }
         return this.matrix;
      }
- 
 
-       
+     checkLegalFriends(i,j){
+        const friends = [{ i: i + 1, j }, { i: i - 1, j }, 
+                       { i, j: j + 1 }, { i, j: j - 1 }];
+        const isLegal = ({ i, j }) => (i < this.size && i >= 0 && 
+                                     j < this.size && j >= 0);
+        return friends.filter(isLegal);
+      }
   
+      checkIfWin(){
+        const last = this.board.length-1;
+        return !!this.board.reduce((res,cur,i)=>res && (cur===(i+1) || i===last));
+      }
+ 
   }
