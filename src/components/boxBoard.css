@@ -1,0 +1,56 @@
+.box--board {
+    margin-top: 15%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box--board div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box--board__message {
+    font-size: 15px;
+  }
+  
+  .box--board__btn {
+    margin-top: 20px;
+    width: 25%;
+  }
+  
+  .box--board__btn{
+    font-size: 10px;
+    color: white;
+    background: #38593f;
+    padding: 1em 2em;
+    border-radius: 5px;
+  }
+  
+  .box--board__btn:hover {
+    color: #070907;
+    background-color: rgb(108, 130, 111);
+    cursor: pointer;
+  }
+  
+  .box--board div span, .box--board div div {
+    background: #532634;
+    width: 46px;
+    margin: 0;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    padding: 14px;
+    color: #fff;
+    border-radius: 5px;
+  
+  }
+  
+  .box--board div span.empty, .box--board div div.empty {
+    margin: 0;
+    padding: 15px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    background: #7d8189;
+  }
