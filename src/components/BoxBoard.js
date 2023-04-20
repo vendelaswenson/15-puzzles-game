@@ -6,7 +6,7 @@ import "./boxBoard.css"
 
 class BoxBoard extends Component {
     static defaultProps = {
-        size: 3,
+        size: 4,
         onMove: (i, j) => { console.log(`${i} ${j}`) }
     }
 
