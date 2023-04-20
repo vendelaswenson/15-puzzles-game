@@ -1,6 +1,5 @@
 .box--board {
-    margin-top: 15%;
-    height: 300px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
