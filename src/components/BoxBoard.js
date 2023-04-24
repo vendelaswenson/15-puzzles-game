@@ -53,7 +53,7 @@ class BoxBoard extends Component {
         return (
             <div className="box--board">
                 {boxRows}
-                <div className="box--board__message">
+                <div className={this.state.win? "box--board__message win" : "box--board__message"}>
                     {this.state.win ? "You won, great job!" : "You can make it!"}
                 </div>
                     <button className="box--board__btn" onClick={this.startOver}>Randomize numbers / start over</button>

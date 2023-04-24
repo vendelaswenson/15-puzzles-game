@@ -30,7 +30,6 @@ Array.prototype.swap = function(i,j){// eslint-disable-line no-extend-native
         return false;
       }
 
-        
       getBoard(size){
         return Array.from({length:size*size},(_,b)=>b);
        }
