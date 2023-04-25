@@ -57,3 +57,16 @@
   .win {
     color: rgb(17, 87, 17);
   }
+
+  @media only screen and (max-width: 600px) {
+    .box--board {
+        width: 500px;
+        height: 500px;
+        margin-top: -40px;
+    }
+
+    .box--board__message {
+        font-size: 25px;
+        margin-top: 20px;
+      }
+  }
