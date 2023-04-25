@@ -1,0 +1,9 @@
+.footer--message {
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer--message {
+        margin-top: -10px;
+    }
+  }
