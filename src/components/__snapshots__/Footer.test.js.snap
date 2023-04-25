@@ -5,7 +5,36 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="footer"
+      >
+        <div
+          class="footer--message"
+        >
+          Click the icon to get to my GitHub!
+        </div>
+        <div>
+          <a
+            href="https://github.com/vendelaswenson"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="github icon"
+              src="/github.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="footer"
+    >
+      <div
+        class="footer--message"
+      >
         Click the icon to get to my GitHub!
       </div>
       <div>
@@ -20,23 +49,6 @@ Object {
           />
         </a>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div>
-      Click the icon to get to my GitHub!
-    </div>
-    <div>
-      <a
-        href="https://github.com/vendelaswenson"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="github icon"
-          src="/github.svg"
-        />
-      </a>
     </div>
   </div>,
   "debug": [Function],
